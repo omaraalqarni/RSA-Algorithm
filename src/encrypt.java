@@ -38,7 +38,8 @@ public class encrypt {
         }
         int blocksize = String.valueOf(ress.get(ress.size()-2)).length();
         String[] textSplitted = textAsNums.split("(?<=\\G.{"+blocksize+"})");
-        String enc = findMod(textSplitted, e, n);
+        String enc = modPow(textSplitted, e, n);
+
         File FileToWriteIn =new File (filename+".rsa");
         PrintWriter pr= new PrintWriter(FileToWriteIn);
         pr.print(enc);
@@ -46,7 +47,7 @@ public class encrypt {
     }
 
 
-    private static String findMod(String[] textSplitted, int e, Long n) {
+    private static String modPow(String[] textSplitted, int e, Long n) {
         int nLength = String.valueOf(n).length();
         BigInteger nBig = new BigInteger(String.valueOf(n));
         ArrayList<BigInteger> textAsBigInt = new ArrayList<BigInteger>();
