@@ -7,7 +7,7 @@
   ##### - [Overview](https://github.com/omarqr0/RSA-Algorithm#Overview)
   ##### - [Technical_overview](https://github.com/omarqr0/RSA-Algorithm#technical_overview)
   ##### - [Encryption](https://github.com/omarqr0/RSA-Algorithm#Encryption)
-  ##### - [Decryption](https://github.com/omarqr0/RSA-Algorithm##Decryption)
+  ##### - [Decryption](https://github.com/omarqr0/RSA-Algorithm#Decryption)
 
         
 ## [Overview](https://github.com/omarqr0/RSA-Algorithm#Overview)
