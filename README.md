@@ -1,21 +1,25 @@
 # RSA-Algorithm         
 ### Done By :
-        • Omar Alqarni              -->       201751650
-        • Abdulrahman Abdulltif     -->       201744290
+  • Omar Alqarni              -->       201751650
+  • Abdulrahman Abdulltif     -->       201744290
         
-##### Table of Contents  
-#### [Encryption](##Encryption:)
+  #### Table of Contents  
+  ##### - [Overview](https://github.com/omarqr0/RSA-Algorithm#Overview)
+  ##### - [Technical_overview](https://github.com/omarqr0/RSA-Algorithm#technical_overview)
+  ##### - [Encryption](https://github.com/omarqr0/RSA-Algorithm#Encryption)
+  ##### - [Decryption](https://github.com/omarqr0/RSA-Algorithm##Decryption)
+
         
-## Overview: 
+## [Overview](https://github.com/omarqr0/RSA-Algorithm#Overview)
   The project's purpose is to encrypt and decrypt messages using the RSA Algoritm.
   The RSA algorithm is an asymmetric cryptography algorithm that has public and private keys. Also, it was founded by Ronald L. Rivest, Adi Shamir, and Leonard M.
   
   
-## Technical Overview:
+## [Technical_overview](https://github.com/omarqr0/RSA-Algorithm#technical_overview)
   - The language used to implement this project was **Java**.
   - The encryption and decryption files are separated for safety.
 
-## [Encryption](https://github.com/omarqr0/RSA-Algorithm##Encryption)
+## [Encryption](https://github.com/omarqr0/RSA-Algorithm#Encryption)
   - the alphabet are stored in a char array along with the digits and symbols
   - The system asks the user to enter the text file wich has:
     - n key
@@ -32,7 +36,8 @@
     - lastly, the long arraylist gets parsed toString and returned to main.
   - Lastly, the system creates a file with the same input file but with the format of __.rsa__ . and writes the encrypted message using PrintWriter.
 
-## Decryption
+## [Decryption](https://github.com/omarqr0/RSA-Algorithm##Decryption)
+
 - The alphabet are stored in a char array along with the digits and symbols
 - the system asks the user to enter the d key and the n key
 - the system asks the user to enter the file name without .rsa ending
