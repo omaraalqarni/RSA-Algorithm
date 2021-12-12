@@ -1,20 +1,17 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.lang.reflect.Array;
 import java.math.BigInteger;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class decrypt {
     public static void main(String[] args) throws FileNotFoundException {
-
-
-
-
     char[] alphabet ={'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',
             'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','0',
             '1','2','3','4','5','6','7','8','9','.','?','!',',',';',':','-','(',')','[',']','{','}','\'','"',' ','\n'};
-
 
     Scanner kb = new Scanner(System.in);
     System.out.print("Welcome\nPlease Enter the d key: " );
@@ -40,15 +37,26 @@ public class decrypt {
     int blocksize = String.valueOf(ress.get(ress.size()-2)).length();
     int nLength = String.valueOf(n).length();
     String[] textSplitted=text.split("(?<=\\G.{"+nLength+"})");
-    String dec = decrypt(n,d,textSplitted,blocksize);
+    String[] dec = decrypt(n,d,textSplitted,blocksize);
+    String result="";
+    String[] eachChar;
+
+    for(int i=0;i<dec.length;i++){
+        eachChar= dec[i].split("(?<=\\G.{"+2+"})");
+        for (int j=0;j<eachChar.length;j++)
+            result += alphabet[Integer.parseInt(eachChar[j])];
+    }
     File FileToWriteIn =new File (filename+".dec");
     PrintWriter pr= new PrintWriter(FileToWriteIn);
-    pr.print(dec);
+    pr.print(result);
     pr.close();
 
     }
 
-    private static String decrypt(long n, int d,String[] message,int blocksize){
+
+
+
+    private static String[] decrypt(long n, int d,String[] message,int blocksize){
         BigInteger[] messageBig = new BigInteger[message.length];
         for(int i=0;i<message.length;i++) {
             messageBig[i] = new BigInteger(message[i]);
@@ -79,7 +87,7 @@ public class decrypt {
         for (int i=0; i<resArr.length;i++){
             res+= resArr[i];
         }
-        return res;
+        return resArr;
     }
 
 }

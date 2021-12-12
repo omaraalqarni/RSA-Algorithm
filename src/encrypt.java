@@ -19,7 +19,7 @@ public class encrypt {
         long n = sc.nextLong();
         String text="";
         while (sc.hasNextLine()){
-            text += sc.nextLine();
+            text += sc.next();
         }
         String textAsNums = "";
         for (int i = 0; i < text.length(); i++) {
@@ -42,7 +42,6 @@ public class encrypt {
         File FileToWriteIn =new File (filename+".rsa");
         PrintWriter pr= new PrintWriter(FileToWriteIn);
         pr.print(enc);
-        System.out.println(enc);
         pr.close();
     }
 
